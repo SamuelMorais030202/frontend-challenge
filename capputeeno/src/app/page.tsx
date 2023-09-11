@@ -1,8 +1,11 @@
+import { FilterBar } from "@/components/FilterBar";
+import styles from './page.module.css';
+
 const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <main className={styles.main}>
+      <FilterBar />
+    </main>
   )
 }
 
