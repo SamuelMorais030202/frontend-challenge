@@ -4,4 +4,5 @@
   align-items: center;
   padding: 34px 168px;
   height: 100vh;
+  background-color: var(--bg-primary);
 }
