@@ -5,6 +5,7 @@ import { Saira_Stencil_One } from 'next/font/google'
 import { PrimaryInputWSearchIcon } from "./PrimaryInput";
 import { useState } from "react";
 import { CardControl } from "./CardControl";
+import { useFilter } from "@/hooks/useFilter";
 // import { useFilter } from "@/hooks/useFilter"
 
 const sairaStencil = Saira_Stencil_One({
@@ -38,8 +39,8 @@ const Logo = styled.a`
 `
 
 export function Header(props : HeaderProps){
-    const [search, setSearch] = useState('');
-
+    const { search, setSearch } = useFilter();
+ 
     return(
         <TagHeader>
             <Logo className={sairaStencil.className}>Capputeeno</Logo>
@@ -52,5 +53,5 @@ export function Header(props : HeaderProps){
                 <CardControl/>
             </div>
         </TagHeader>
-    )
+    ) 
 }
