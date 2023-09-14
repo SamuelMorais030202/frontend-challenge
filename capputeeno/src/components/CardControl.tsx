@@ -20,7 +20,7 @@ const Container = styled.div`
 `
 
 export function CardControl() {
-  const { value } = useLocalStorage('card-items', []);
+  const { value } = useLocalStorage('cart-items', []);
 
   return (
     <Container>
