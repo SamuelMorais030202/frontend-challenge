@@ -20,12 +20,12 @@ const Container = styled.div`
 `
 
 export function CardControl() {
-  const { updateLocalStorage, value } = useLocalStorage('card-items', []);
+  const { value } = useLocalStorage('card-items', []);
 
   return (
-    <div>
+    <Container>
       <CardIcon />
       {value.length > 0 && <CardCount>{value.length}</CardCount>}
-    </div>
+    </Container>
   )
 }
