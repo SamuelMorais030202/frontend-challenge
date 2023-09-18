@@ -1,4 +1,5 @@
 import { useLocalStorage } from "@/hooks/useLocalStorage";
+import { useRouter } from "next/navigation";
 import { styled } from "styled-components";
 import { CardIcon } from "./icons/ShoppingBag";
 
@@ -22,8 +23,10 @@ const Container = styled.div`
 export function CardControl() {
   const { value } = useLocalStorage('cart-items', []);
 
+  const router = useRouter();
+
   return (
-    <Container>
+    <Container onClick={() => router.push('/card')}>
       <CardIcon />
       {value.length > 0 && <CardCount>{value.length}</CardCount>}
     </Container>
